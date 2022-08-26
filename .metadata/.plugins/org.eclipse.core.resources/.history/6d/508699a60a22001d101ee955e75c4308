@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+
+public class Test {
+
+
+	public static void main(String[] args) {
+		ArrayList<String> names = new ArrayList<String>();
+		names.add("Sowmya");
+		names.add("Aadya");
+		names.add("Aarush");
+		names.add("Anu");
+		names.add("Sachin");
+		names.add("Ashwini");
+		names.add("Vishal");
+		names.add("Anthony");
+		names.add("Affle");
+		names.add("Vedaa");
+		names.add("Rochana");
+		names.add("Avva");
+		int count = 0;
+		
+		for(int i = 0; i<names.size();i++) {
+			if(names.get(i).startsWith("A")) {
+				count++;
+			}
+		}
+		
+		System.out.println("No.of Names starting with A: "+count);
+				
+	}
+}

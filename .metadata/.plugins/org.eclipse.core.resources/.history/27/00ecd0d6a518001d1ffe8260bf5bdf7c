@@ -1,0 +1,31 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class AssigmentOnWaits {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "chromedriver");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://rahulshettyacademy.com/loginpagePractise/");
+		
+		driver.findElement(By.id("username")).sendKeys("rahulshettyacademy");
+		driver.findElement(By.id("password")).sendKeys("learning");
+		String userChkBox = "//div[@class='form-check-inline']//input[@value='user']/following-sibling::span";
+		driver.findElement(By.xpath(userChkBox)).click();
+		
+		WebElement userSelect = driver.findElement(By.xpath("//select"));
+		Select users = new Select(userSelect);
+		
+		users.selectByValue("consult");
+		
+		driver.findElement(By.id("terms"));
+		
+		
+	}
+
+}
